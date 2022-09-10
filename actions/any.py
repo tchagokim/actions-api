@@ -1,6 +1,11 @@
-class AnyActions:
-    def __init__(self, data):
-        self.data = data
+from actions.base import BaseActions
+
+class AnyActions(BaseActions):
+    def __init__(self, request, data):
+        super().__init__(request,data)
+
+    def who(self):
+        return {"username": self.request.state.token.get("username")}
 
     def something(self):
         return {"detail": "Something message"}

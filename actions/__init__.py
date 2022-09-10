@@ -1,7 +1,7 @@
 import importlib
 import os
 
-ignore_filenames = ["__init__.py", "__pycache__"]
+ignore_filenames = ["__init__.py", "__pycache__", "base.py"]
 
 module_names = [
     filename.replace(".py", "")

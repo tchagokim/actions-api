@@ -1,9 +1,9 @@
+from actions.base import BaseActions
 from database.customers_dao import CustomersDAO
 
-
-class CustomersActions:
-    def __init__(self, data):
-        self.data = data
+class CustomersActions(BaseActions):
+    def __init__(self, request, data):
+        super().__init__(request,data)
         self.dao = CustomersDAO()
 
     def new_customer(self):
