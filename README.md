@@ -5,4 +5,5 @@ An API with actions
 - make run
 
 
-to create a new action: make create action=action_name
+to create a new action: 
+- make create action=action_name
