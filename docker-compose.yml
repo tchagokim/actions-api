@@ -1,0 +1,18 @@
+version: '3'
+
+services:    
+    actions-api:
+        build:
+            context: .
+        image: actions-api
+        restart: always
+        container_name: actions-api
+        ports: 
+            - "8000:8000"
+        volumes:
+            - .:/api
+        
+
+    
+
+
