@@ -6,4 +6,4 @@ class UserSchema(BaseModel):
     password: str
     name: str
     phone: str
-    job: str
+    premium_account: bool

@@ -10,8 +10,8 @@ users_data = [
         username=f"user{n}",
         password="123",
         name=fake.name(),
-        job=fake.job(),
         phone=fake.phone_number(),
+        premium_account = n % 2==0
     )
     for n in range(5)
 ]

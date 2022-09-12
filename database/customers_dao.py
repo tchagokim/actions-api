@@ -14,4 +14,4 @@ class CustomersDAO(DAO):
         return self.read_id(id_)
 
     def get_customers(self):
-        return [customer.dict() for customer in self.datalist]
+        return self.read()

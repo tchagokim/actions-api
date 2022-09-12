@@ -17,7 +17,7 @@ class AuthController:
         self.password = payload.password.strip()
         self.users = users_data
         if self.authenticate(self):
-            return {"token": self.generate_token(self)}
+            return {"token" : self.generate_token(self)}
         return None
 
     def authenticate(self):
@@ -27,7 +27,7 @@ class AuthController:
         return False
 
     def generate_token(self):
-        expiration = datetime.utcnow() + timedelta(minutes=15)
+        expiration = datetime.utcnow() + timedelta(minutes=settings.jwt_expire_minutes)
         to_encode = {"username": self.username, "exp": expiration}
         return jwt.encode(to_encode, settings.jwt_secret_key, "HS256")
 

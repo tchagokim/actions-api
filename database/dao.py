@@ -7,7 +7,7 @@ class DAO:
         return len(self.datalist)
 
     def read(self):
-        return self.datalist
+        return [itm for itm in self.datalist]
 
     def read_id(self, id_):
         return self.datalist[id_]
